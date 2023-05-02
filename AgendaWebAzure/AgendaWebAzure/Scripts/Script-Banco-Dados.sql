@@ -19,5 +19,6 @@ insert into clientes (nome, email, fone, dataCriacao) values ('Pedro Zulu','pedr
 insert into clientes (nome, email, fone, dataCriacao) values ('Marcia Sabia','marcia.sabia@gmail.com','11 2356-9865',now());
 
 select id, nome, email, fone from clientes;
-
+update clientes set nome = @nome, email = @email, fone = @fone where id = @id;
+delete from clientes where id = @id;
 
