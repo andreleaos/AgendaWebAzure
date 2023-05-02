@@ -1,0 +1,46 @@
+﻿@model AgendaWebAzure.Models.Entitties.Cliente
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h4>Cadastro de Clientes</h4>
+
+
+<h5>Tem certeza que deseja exckuir?</h5>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fone)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete" method="post">
+        <input type="hidden" name="Id" id="Id" value="@Model.Id" />
+        <input type="hidden" name="Nome" id="Nome" value="@Model.Nome" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>
